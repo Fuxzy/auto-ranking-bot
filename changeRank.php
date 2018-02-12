@@ -1,10 +1,10 @@
-$heroku buildpacks:set heroku/php
+<?php
 $group_id         = $_GET['groupId'];
 $new_role_set_id  = $_GET['newRoleSetId'];
 $target_user_id   = $_GET['targetUserId'];
 
 
-$login_user       = 'username=(process.env.BOT_USERNAME)&password=(process.env.BOT_PASSWORD)';
+$login_user       = 'username=(heroku config:get BOT_USERNAME)&password=(heroku config:get BOT_PASSWORD)';
 $file_path_rs     = 'rs.txt';
 $file_path_token  = 'token.txt';
 $current_rs       = file_get_contents($file_path_rs);
