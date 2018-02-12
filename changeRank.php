@@ -1,4 +1,4 @@
-<?php>
+$heroku buildpacks:set heroku/php
 $group_id         = $_GET['groupId'];
 $new_role_set_id  = $_GET['newRoleSetId'];
 $target_user_id   = $_GET['targetUserId'];
